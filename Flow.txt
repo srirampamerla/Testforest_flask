@@ -1,18 +1,21 @@
-Create the Folder Notebooks add your Notebooks
-Create the Folder Models add your pickles files
-Change the app name to application
-add ur content in the application files
-in requirements try to downlaod the packages and run the file in the terminal. It should donload all the packages
-Create the Templates folder and index.html file after adding this data
+Create the Folder Notebooks add your Notebooks.
+Create the Folder Models add your pickles files.
+Change the app name to application.
+Add your content in the application files.
+In requirements try to downlaod the packages and run the file in the terminal. It should donload all the packages.
+Create the Templates folder and add index.html file after adding this data
 @app.route("/")
 def index():
     return render_template('index.html')
-add some lines in the index file
-After that run python application.py in the terminal
+add some lines in the index file.
+After that run python application.py in the terminal.
 
 Currently copied the url where workspace is running
-https://orange-chef-hkniy.pwskills.app:5000/   -> CLick enter it will be fine
-it is checkig the render templte and printing the index html.
+https://url upto first /:portnumber/(last slash running the code in flask we mntioned in the @app.route("/")).   -> CLick enter it will be fine.
+It is checking the render template and open the index html page from the templated folder.
+
+
+# For Prediction 
 
 @app.route('/predictdata',methods=['GET','POST'])
 
@@ -22,48 +25,74 @@ def predict_data():
     else:
         return render_template('home.html')
 
-u want to wat to predict with help of function
-add home.html in the templates-- which will be the html package. This is get method
+U want to add to predict with help of above function.
+Add home.html in the templates-- which will be the html package. This is get method.
 
 Run the file again
-https://orange-chef-hkniy.pwskills.app:5001/predictdata
+https://url upto first /:portnumber/predictdata  ->@app.route('/predictdata',methods=['GET','POST'])
 
 we are able to see the home page.
 
-To see predition result we need some modifications in the post files . IN Post method
+To see predition result we need some modifications in the post method in application.py file  . IN Post method
+
 Add details and run the file again.
-One html is opened type the values and click on predict data. We will predicted result based on the test data.
+
+One html is opened type the values and click on predict data. We will get the predicted result based on the given test data.
+
 Once Done with this we need to deploy in the Github.
 
-close the connection in terminal
-type ls -able
-By default some git repository is present
+close the connection in terminal.
+type ls -a
 
-git remote -v  -Pwskills repository
+By default some git repository is present.
 
-To put it in your repository
+git remote -v  - some repository will present.
+
+To put it in your repository.
+
 git remote rm origin
 
-create the repository or open the existing repository 
-follow these and execute in terminal.
+Create the repository or open the existing repository .
+
+Follow these and execute in terminal.
 
 git init
 
 git add README.md
+
 git commit -m "first commit"
+
 git branch -M main
-git remote add origin https://github.com/srirampamerla/Testforest_flask.git
+
+git remote add origin https://github.com/username/reponame.git
+
 git push -u origin main
 
+Follow these one by one after running the git init
 
-or 
-after running the git init
 git add .
+
 git status
 
-git commit -m "first commit"  it will some condition
+git commit -m "first commit" . If it ask to run your  name and email address
 
 Run
 
   git config --global user.email "you@example.com"
   git config --global user.name "Your Name"
+
+  git branch -M main
+
+  git remote add origin https://github.com/username/reponame.git
+  
+  git push -u origin main
+
+  It will allow some code and allow all. It will open the Github and authorization in Github.
+  Come back terminal . It will prompt enter usernmae and the Password(Personal token)-Once entered all the files will be merged.
+
+# Deployment to AWS
+Add folder .ebextensions and add file python.config
+
+In python config:
+#first application is my application.py file 
+      #second application is my application = Flask(__name__) in application file.
