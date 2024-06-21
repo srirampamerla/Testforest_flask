@@ -93,6 +93,27 @@ Run
 # Deployment to AWS
 Add folder .ebextensions and add file python.config
 
-In python config:
+In Python config:
 #first application is my application.py file 
       #second application is my application = Flask(__name__) in application file.
+
+push the code in the GitHub.
+
+open AWS -> Elastic Beanstalk-> create new application-> Write application name as repo name and in Platform -> Select python 
+and application code as a sample application click on create. Wait for environment to be created.
+
+We need to create the pipeline Git Hub to Elastic Beanstalk. To do that Code Pipeline.
+Create Pipeline.Enter Name and click on next. Source provider a GitHub (we are getting the code from GitHub repository.
+Click on connect to Git Hub. once connected search for repo name and branch as main. Detection options as GitHub webhooks and click on next.
+skip build stage and select deploy provider as (aws beanstalk). Once the env is created. In the application name choose the application name and env name
+and complete the pipeline.
+
+Once deployed is successful.open the link which will be prompted.
+Click on url.
+After the open url write the name of the app like / or /predictdata. It will be deployed successfully.
+
+
+Git Hub to AWS(In AWS we use elastic beanstalk which is the Linux machine where we can create the env and deploy and run the code in that).
+we need configuration to connect.
+To connect with github to AWS we need pipeline(called Code pipeline)
+if changes doone in the github automatically it will be deployed)
