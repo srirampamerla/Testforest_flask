@@ -48,8 +48,22 @@ create the repository or open the existing repository
 follow these and execute in terminal.
 
 git init
+
 git add README.md
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/srirampamerla/Testforest_flask.git
 git push -u origin main
+
+
+or 
+after running the git init
+git add .
+git status
+
+git commit -m "first commit"  it will some condition
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
