@@ -1,0 +1,55 @@
+Create the Folder Notebooks add your Notebooks
+Create the Folder Models add your pickles files
+Change the app name to application
+add ur content in the application files
+in requirements try to downlaod the packages and run the file in the terminal. It should donload all the packages
+Create the Templates folder and index.html file after adding this data
+@app.route("/")
+def index():
+    return render_template('index.html')
+add some lines in the index file
+After that run python application.py in the terminal
+
+Currently copied the url where workspace is running
+https://orange-chef-hkniy.pwskills.app:5000/   -> CLick enter it will be fine
+it is checkig the render templte and printing the index html.
+
+@app.route('/predictdata',methods=['GET','POST'])
+
+def predict_data():
+    if request.method=="POST":
+        pass
+    else:
+        return render_template('home.html')
+
+u want to wat to predict with help of function
+add home.html in the templates-- which will be the html package. This is get method
+
+Run the file again
+https://orange-chef-hkniy.pwskills.app:5001/predictdata
+
+we are able to see the home page.
+
+To see predition result we need some modifications in the post files . IN Post method
+Add details and run the file again.
+One html is opened type the values and click on predict data. We will predicted result based on the test data.
+Once Done with this we need to deploy in the Github.
+
+close the connection in terminal
+type ls -able
+By default some git repository is present
+
+git remote -v  -Pwskills repository
+
+To put it in your repository
+git remote rm origin
+
+create the repository or open the existing repository 
+follow these and execute in terminal.
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/srirampamerla/Testforest_flask.git
+git push -u origin main
